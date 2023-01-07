@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>星月宝藏屋</title>
+        <script language="javascript">
+            function share_data_time() {
+                var love_daysold = document.getElementById("Love_daysold");
+                var love_hrsold = document.getElementById("Love_hrsold");
+                var love_minsold = document.getElementById("Love_minsold");
+                var love_seconds = document.getElementById("Love_seconds");
+                var meetdaysold = document.getElementById("meet_daysold");
+                var meethrsold = document.getElementById("meet_hrsold");
+                var meetminsold = document.getElementById("meet_minsold");
+                var meetseconds = document.getElementById("meet_seconds");
+                window.setTimeout("share_data_time()", 1000);
+                //星月⭐🌙
+                LoveDay = new Date("2022-01-08");
+                MeetDay = new Date("2020-08-27");
+                //获取当前时间
+                today = new Date();
+                timeold = (today.getTime() - LoveDay.getTime()); //总豪秒数
+                meet_timeold = (today.getTime() - MeetDay.getTime()); //总豪秒数
+                secondsold = Math.floor(timeold / 1000);          //总秒数
+                meet_secondsold = Math.floor(meet_timeold / 1000); //总秒数
+                e_daysold = timeold / (24 * 60 * 60 * 1000);
+                meet_e_daysold = meet_timeold / (24 * 60 * 60 * 1000);
+                daysold = Math.floor(e_daysold);                 //相差天数
+                meet_daysold = Math.floor(meet_e_daysold);
+                e_hrsold = (e_daysold - daysold) * 24;
+                meet_e_hrsold = (meet_e_daysold - meet_daysold) * 24;
+                hrsold = Math.floor(e_hrsold);                   //相差小时数
+                meet_hrsold = Math.floor(meet_e_hrsold);
+                e_minsold = (e_hrsold - hrsold) * 60;
+                meet_e_minsold = (meet_e_hrsold - meet_hrsold) * 60;
+                minsold= Math.floor(e_minsold);              //相差分钟数
+                meet_minsold= Math.floor(meet_e_minsold);
+                seconds = Math.floor((e_minsold - minsold) * 60);  //相差秒数
+                meet_seconds = Math.floor((meet_e_minsold - meet_minsold) * 60);
+                //将所获取的时间拼接到一起，再把值显示到页面
+                love_daysold.innerHTML = daysold;
+                love_hrsold.innerHTML = hrsold;
+                love_minsold.innerHTML = minsold;
+                love_seconds.innerHTML = seconds;
+                meetdaysold.innerHTML = meet_daysold;
+                meethrsold.innerHTML = meet_hrsold;
+                meetminsold.innerHTML = meet_minsold;
+                meetseconds.innerHTML = meet_seconds;
+            }
+            share_data_time();
+        </script>
+        <style type="text/css">
+            body {
+                background-image: url(backgroud.png) ;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </div>
+        <div>
+            <p style="font-size: 20px;">2020年8月27日,⭐⭐认识了🌙🌙</p>
+            <p style="font-size: 30px;display: inline;">⭐🌙认识：</p><p id="meet_daysold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">天</p><p id="meet_hrsold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">小时</p><p id="meet_minsold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">分</p><p id="meet_seconds" style="font-size: 20px;display: inline;"></p> <p style="font-size: 30px;display: inline;">秒</p>
+        </div>
+        <div>
+            <p style="font-size: 20px">2022年1月8日,⭐⭐&🌙🌙相爱了</p>
+            <p style="font-size: 30px;display: inline;">⭐🌙相爱：</p><p id="Love_daysold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">天</p><p id="Love_hrsold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">小时</p><p id="Love_minsold" style="font-size: 20px;display: inline;"></p><p style="font-size: 30px;display: inline;">分</p><p id="Love_seconds" style="font-size: 20px;display: inline;"></p> <p style="font-size: 30px;display: inline;">秒</p>  
+        </div>
+        <div>
+            <p style="font-size: 50px">小兔兔年副本已开启，一起冲冲冲吧！</p>
+        </div>
+    </body>
+</html>
